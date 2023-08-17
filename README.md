@@ -4,7 +4,7 @@ Specific use is for professors to manage their students' thesis progress.
 Users are divided to manager/member, with authorization to create team, manage sprints/backlog items/tasks, and many other CRUD operations.
 
 Design: Model-View-ViewModel
-Language/Frameworks/Libraries: Java, JavaFX, FXML, SQL
+Language/Frameworks/Libraries: Java, JavaFX, FXML, CSS, SQL
 
 [Project's link (Designs, Presentations, Demos):](https://drive.google.com/drive/folders/1y_x9ihoeJNq1VWwB_V3d0UdEZAMEdHFH?usp=sharing) 
 
