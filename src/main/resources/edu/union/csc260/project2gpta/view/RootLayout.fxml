@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane prefHeight="400.0" prefWidth="800.0"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="edu.union.csc260.project2gpta.controller.RootLayoutController"
+            stylesheets="@styles.css" >
+    <top>
+        <HBox fx:id="menuBox">
+            <MenuBar id="navBar" HBox.hgrow="SOMETIMES">
+                <Menu text="Help">
+                    <items>
+                        <MenuItem text="About" onAction="#handleAbout"/>
+                    </items>
+                </Menu>
+            </MenuBar>
+            <MenuBar id="userBar" HBox.hgrow="SOMETIMES">
+                <Menu id="userMenu" fx:id="currentUserNavbar">
+                    <MenuItem fx:id="groupOverviewItem" text="Group Overview" onAction="#showGroupOverview"/>
+                    <MenuItem fx:id="logOutItem" text="Log Out" onAction="#handleSignOut"/>
+                </Menu>
+            </MenuBar>
+        </HBox>
+    </top>
+</BorderPane>

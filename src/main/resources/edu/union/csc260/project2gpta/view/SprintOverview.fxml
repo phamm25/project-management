@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane styleClass="anchor-pane" stylesheets="@styles.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="edu.union.csc260.project2gpta.controller.SprintOverviewController">
+    <children>
+        <Label style="-fx-background-radius: 5; -fx-padding: 5 10 5 10; -fx-background-color: white;" fx:id="projectNameLabel" styleClass="project-label" text="CSC497 Sample Project Name" AnchorPane.leftAnchor="20" AnchorPane.topAnchor="20" />
+        <SplitPane styleClass="split-pane" dividerPositions="0.5" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="70">
+            <AnchorPane styleClass="anchor-pane" fx:id="currentSprintAnchorPane">
+                <Label style="-fx-background-radius: 5; -fx-padding: 5 10 5 10; -fx-background-color: white;" styleClass="overview-label" text="Current Sprint" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="10" />
+                <StackPane AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="50">
+                    <VBox alignment="CENTER" spacing="30" style="-fx-background-color: #F5F5F5; -fx-background-radius: 5; -fx-padding: 10;">
+                        <VBox alignment="CENTER">
+                            <Label fx:id="currentSprintTotalBacklogItems" />
+                            <Label fx:id="sprintStatus"/>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER">
+                            <Label text="Sprint Progress" />
+                            <ProgressBar fx:id="currentSprintProgress"/>
+                        </VBox>
+                    </VBox>
+                </StackPane>
+            </AnchorPane>
+            <AnchorPane fx:id="sprintOverviewAnchorPane" styleClass="anchor-pane">
+                <Label fx:id="userSprintOverview" style="-fx-background-radius: 5; -fx-padding: 5 10 5 10; -fx-background-color: white;" styleClass="overview-label" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="10" />
+                <Button onAction="#showAddSprint" text="Add Sprint" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="10" style="-fx-padding: 5px; -fx-font-size: 14px;"/>
+                <StackPane AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="50">
+                    <ListView fx:id="sprintListView" styleClass="column"/>
+                </StackPane>
+            </AnchorPane>
+        </SplitPane>
+    </children>
+</AnchorPane>

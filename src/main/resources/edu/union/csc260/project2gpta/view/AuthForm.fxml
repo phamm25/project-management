@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="edu.union.csc260.project2gpta.controller.AuthFormController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <StackPane fx:id="stackPane" layoutX="100" layoutY="100" prefWidth="400" prefHeight="200">
+        <VBox fx:id="signInForm" spacing="10">
+            <Label text="Sign In" />
+            <TextField fx:id="signInEmail" promptText="Email" />
+            <Button fx:id="switchToSignUpButton" text="Switch to Sign Up" onAction="#switchToSignUp" />
+            <Button text="Sign In" onAction="#handleSignIn" />
+        </VBox>
+
+        <VBox fx:id="signUpForm" spacing="10" visible="false">
+            <Label text="Sign Up" />
+            <TextField fx:id="signUpName" promptText="Enter your name" />
+            <TextField fx:id="signUpEmail" promptText="Email" />
+            <ComboBox fx:id="roleSelection" style=" -fx-pref-width: 150px;-fx-background-color: white;-fx-border-color: #cccccc;-fx-border-radius: 3px;" promptText="Role">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Member" />
+                        <String fx:value="Manager" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <Button fx:id="switchToSignInButton" text="Switch to Sign In" onAction="#switchToSignIn" />
+            <Button text="Sign Up" onAction="#handleSignUp" />
+        </VBox>
+    </StackPane>
+</AnchorPane>

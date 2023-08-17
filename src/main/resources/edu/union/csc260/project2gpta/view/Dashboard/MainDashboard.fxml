@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane hgap="10" stylesheets="@../styles.css" vgap="10" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.union.csc260.project2gpta.controller.MainDashboardController">
+    <columnConstraints>
+        <ColumnConstraints percentWidth="20" />
+        <ColumnConstraints percentWidth="20" />
+        <ColumnConstraints percentWidth="20" />
+        <ColumnConstraints percentWidth="20" />
+        <ColumnConstraints percentWidth="20" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints percentHeight="5.0" />
+        <RowConstraints percentHeight="5.0" />
+        <RowConstraints percentHeight="80.0" /> <!-- Adjusted from 90.0 to 75.0 -->
+        <RowConstraints percentHeight="10.0" /> <!-- Added this row with 10.0 percent height -->
+    </rowConstraints>
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+    <children>
+        <!-- Dropdown -->
+        <ComboBox fx:id="sprintComboBox" promptText="Select Sprint" styleClass="dashboardDropdown" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="0" />
+        <!-- Button for Overview -->
+        <Button styleClass="small-button" text="Home Page" alignment="CENTER" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="0" onAction="#backToSprintOverview"/>
+        <Button styleClass="small-button" text="Edit Sprint" alignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="0" onAction="#openSprintEdit"/>
+
+        <Label styleClass="column-text-size" text="Backlog Items" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER"/>
+        <Label styleClass="column-text-size" text="To Do" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+        <Label styleClass="column-text-size" text="In Progress" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+        <Label styleClass="column-text-size" text="To Test" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+        <Label styleClass="column-text-size" text="Done" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+
+        <!-- Task columns -->
+        <VBox GridPane.columnIndex="0" GridPane.rowIndex="2" spacing="10">
+            <HBox prefHeight="30" spacing="10">
+                <Button onAction="#addBacklogItem" styleClass="small-button" text="Add" HBox.hgrow="SOMETIMES"/>
+                <Button onAction="#stageBacklogItems" styleClass="small-button" text="Stage" HBox.hgrow="SOMETIMES"/>
+                <Button onAction="#deleteBacklogItems" styleClass="small-button" text="Delete" HBox.hgrow="SOMETIMES"/>
+            </HBox>
+            <ListView fx:id="backlogItemsListView" styleClass="column"  />
+        </VBox>
+        <ListView fx:id="toDoListView" styleClass="column" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <ListView fx:id="inProgressListView" styleClass="column" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <ListView fx:id="toTestListView" styleClass="column" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+        <ListView fx:id="doneListView" styleClass="column" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+    </children>
+</GridPane>

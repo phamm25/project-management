@@ -1,0 +1,141 @@
+/* RootLayout Styles */
+.menu-bar {
+    -fx-background-color: derive(#6b0c0c,20%);
+}
+
+.context-menu {
+    -fx-background-color: derive(#1d1d1d,50%);
+}
+
+.menu-bar .label {
+    -fx-font-size: 12pt;
+    -fx-text-fill: white;
+    -fx-opacity: 0.9;
+}
+
+.menu .left-container {
+	-fx-background-color: black;
+}
+
+#userMenu {
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: contain;
+    -fx-background-position: center;
+    -fx-padding: 6.5px 50px;
+}
+
+
+#navBar {
+    -fx-min-width: 450px;
+    -fx-alignment: center-left;
+    -fx-min-height: 40px;
+}
+
+#userBar {
+    -fx-min-width: 450px;
+    -fx-alignment: center-right;
+    -fx-min-height: 40px;
+     -fx-padding: 0 35px 0 0; /* Add right padding */
+}
+
+
+/* Overview Styles */
+.project-label {
+    -fx-font-size: 24px;
+    -fx-font-family: "Arial", sans-serif;
+}
+
+.overview-label {
+    -fx-font-size: 18px;
+    -fx-font-family: "Arial", sans-serif;
+}
+
+.anchor-pane {
+    -fx-background-color: #dddddd; /* set the background color to light gray */
+}
+
+.split-pane {
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+    -fx-border-color: #c0c0c0; /* set the border color to light gray */
+}
+
+/* Dashboard Button Bar styles */
+.small-button {
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+}
+
+.column-text-size {
+    -fx-font-size: 14px;
+}
+
+.button-bar {
+    -fx-button-min-width: 30px;
+    -fx-button-min-height: 30px;
+}
+/* Dashboard Styles */
+.column {
+    -fx-background-color: white;
+    -fx-padding: 10;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.column > * {
+    -fx-spacing: 3;
+}
+
+.dashboardDropdown {
+    -fx-pref-width: 140px;
+    -fx-font-size: 14px;
+}
+
+/* Task Component Styles */
+.task-component {
+    -fx-background-color: #D3D3D3; /* This is light grey. */
+    -fx-padding: 5;
+    -fx-border-color: #c0c0c0;
+    -fx-border-width: 1;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-margin-bottom: 5;
+    -fx-alignment: top-left;
+}
+
+.task-label {
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial", sans-serif;
+}
+
+.task-toDo {
+    -fx-padding: 7;
+    -fx-background-color: #D3D3D3; /* Color for To Do */
+    -fx-background-radius: 7px;
+}
+
+.task-inProgress {
+    -fx-background-color: #ffff99; /* Color for In Progress */
+    -fx-padding: 7;
+    -fx-background-radius: 7px;
+}
+
+.task-toTest {
+    -fx-background-color: #ffcc99; /* Color for To Test */
+    -fx-padding: 7;
+    -fx-background-radius: 7px;
+}
+
+.task-done {
+    -fx-background-color: #99ff99; /* Color for Done */
+    -fx-padding: 7;
+    -fx-background-radius: 7px;
+}
+
+/*Task Edit*/
+
+#radioButtonVBox {
+    -fx-padding: 10px;
+}

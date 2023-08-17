@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="edu.union.csc260.project2gpta.controller.CreateGroupController">
+    <children>
+        <HBox style="-fx-padding: 5px 5px 10px 5px"><Label text="Group Details" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0"/></HBox>
+        <GridPane vgap="10" hgap="5" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="30.0">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="30" hgrow="SOMETIMES"/>
+                <ColumnConstraints percentWidth="70" hgrow="SOMETIMES"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints vgrow="ALWAYS"/>
+                <RowConstraints vgrow="ALWAYS"/>
+                <RowConstraints vgrow="ALWAYS"/>
+            </rowConstraints>
+            <children>
+                <Label text="Group Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="groupName" GridPane.rowIndex="0" GridPane.columnIndex="1"></TextField>
+
+                <Label text="Description:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextArea fx:id="groupDescription" GridPane.rowIndex="1" GridPane.columnIndex="1"></TextArea>
+
+            </children>
+        </GridPane>
+
+        <ButtonBar AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+            <buttons>
+                <Button  text="Save" onAction="#addGroupHandler"/>
+                <Button  text="Cancel" onAction="#cancelHandler"/>
+            </buttons>
+        </ButtonBar>
+
+    </children>
+</AnchorPane>

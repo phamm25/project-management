@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="edu.union.csc260.project2gpta.controller.AddMemberController">
+    <children>
+        <HBox style="-fx-padding: 5px 5px 10px 5px"><Label text="Add Member" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0"/></HBox>
+        <GridPane vgap="10" hgap="5" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="30.0">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="40" hgrow="SOMETIMES"/>
+                <ColumnConstraints percentWidth="60" hgrow="SOMETIMES"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints vgrow="ALWAYS"/>
+                <RowConstraints vgrow="ALWAYS"/>
+                <RowConstraints vgrow="ALWAYS"/>
+            </rowConstraints>
+            <children>
+                <Label text="Group:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <ComboBox fx:id="groupList" promptText="Select Group" GridPane.rowIndex="0" GridPane.columnIndex="1" style="-fx-pref-width: 250px;"></ComboBox>
+
+                <Label text="Member's Email:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="userEmail" GridPane.rowIndex="1" GridPane.columnIndex="1"></TextField>
+
+            </children>
+        </GridPane>
+
+        <ButtonBar AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+            <buttons>
+                <Button  text="Add" onAction="#addMemberHandler"/>
+                <Button  text="Cancel" onAction="#cancelHandler"/>
+            </buttons>
+        </ButtonBar>
+
+    </children>
+</AnchorPane>

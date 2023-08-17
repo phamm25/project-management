@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox fx:id="taskBox" styleClass="task-component shadow" spacing="10.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.union.csc260.project2gpta.controller.TaskComponentController" >
+    <children>
+        <Label fx:id="taskNameLabel" />
+        <Label fx:id="taskStatusLabel" />
+    </children>
+</VBox>

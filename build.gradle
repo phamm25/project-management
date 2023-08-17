@@ -1,0 +1,30 @@
+
+plugins {
+  id 'application'
+  id 'org.openjfx.javafxplugin' version '0.0.9'
+}
+
+repositories {
+    mavenCentral()
+}
+test {
+  useJUnit()
+
+  include '**/*Suite.class'
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.mockito:mockito-core:3.9.0'
+    implementation 'mysql:mysql-connector-java:8.0.33'
+}
+
+
+javafx {
+    version = "16"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+application {
+    mainClass = 'edu.union.csc260.project2gpta.MainApp'
+}

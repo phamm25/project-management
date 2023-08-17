@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="edu.union.csc260.project2gpta.controller.SprintEditController"> <!--fx:controller="edu.union.csc260.project2gpta.controller.SprintEditController"-->
+    <children>
+        <HBox style="-fx-padding: 5px 5px 10px 5px"><Label text="Sprint Details" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0"/></HBox>
+        <GridPane vgap="10" hgap="5" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="30.0">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="50" hgrow="SOMETIMES"/>
+                <ColumnConstraints percentWidth="50" hgrow="SOMETIMES"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints vgrow="ALWAYS"/>
+                <RowConstraints vgrow="ALWAYS"/>
+                <RowConstraints vgrow="ALWAYS"/>
+            </rowConstraints>
+            <children>
+                <Label text="Sprint Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="sprintNameField" GridPane.rowIndex="0" GridPane.columnIndex="1"></TextField>
+
+                <Label text="Start Date:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="startDateField" GridPane.rowIndex="1" GridPane.columnIndex="1"></TextField>
+
+                <Label text="End Date:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="endDateField" GridPane.rowIndex="2" GridPane.columnIndex="1"></TextField>
+                <Label text="Reflection:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextArea fx:id="reflectionArea" GridPane.rowIndex="3" GridPane.columnIndex="1"></TextArea>
+            </children>
+        </GridPane>
+
+        <ButtonBar AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+            <buttons>
+                <Button onAction="#saveSprint" text="Save" /> <!--need to add controller script onAction="" -->
+                <Button onAction="#cancel" text="Cancel" /> <!--onAction=""-->
+            </buttons>
+        </ButtonBar>
+
+    </children>
+</AnchorPane>
