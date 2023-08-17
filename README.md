@@ -1,10 +1,13 @@
 # project2GPTA
-In this project, I led a team of 4 to build a project management system. Specific use is for professors to manage their students' thesis progress. Users are divided to manager/member, with authorization to create team, manage sprints/backlog items/tasks, and many other CRUD operations.
+In this project, I led a team of 4 to build a project management system. 
+Specific use is for professors to manage their students' thesis progress. 
+Users are divided to manager/member, with authorization to create team, manage sprints/backlog items/tasks, and many other CRUD operations.
 
 Design: Model-View-ViewModel
 Language/Frameworks/Libraries: Java, JavaFX, FXML, SQL
 
 [Project's link (Designs, Presentations, Demos):](https://drive.google.com/drive/folders/1y_x9ihoeJNq1VWwB_V3d0UdEZAMEdHFH?usp=sharing) 
+
 UI examples:
 
 <img width="556" alt="Screenshot 2023-08-17 at 19 38 46" src="https://github.com/phamm25/project-management/assets/122081592/5db1b421-295d-4a84-b370-5498f46c474e">
